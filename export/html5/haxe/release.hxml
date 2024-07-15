@@ -1,0 +1,35 @@
+-main ApplicationMain 
+-cp C:/haxelib/flixel/5,8,0
+-D flixel=5.8.0
+--macro openfl.utils._internal.ExtraParamsMacro.include()
+-cp C:/haxelib/openfl/9,3,3/src
+-D openfl=9.3.3
+--macro lime._internal.macros.DefineMacro.run()
+-cp C:/haxelib/lime/8,1,2/src
+-D lime=8.1.2
+--macro keep('IntIterator')
+-cp C:/haxelib/hscript/2,5,0
+-D hscript=2.5.0
+-cp source
+-D tools=8.1.2
+-D lime-canvas
+-D FLX_NO_DEBUG
+-D message.reporting=pretty
+-D howlerjs
+-D no-compilation
+-D openfl-html5
+-D NAPE_RELEASE_BUILD
+-D lime-webgl
+-D lime-dom
+-D lime-howlerjs
+-D lime-html5
+-D FLX_NO_HEALTH
+-D html5
+-D web
+--remap flash:openfl
+--macro flixel.system.macros.FlxDefines.run()
+--connect
+6001
+-js export/html5/bin/HelloWorld.js
+-cp export/html5/haxe
+-D html5

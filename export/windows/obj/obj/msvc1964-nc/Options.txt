@@ -1,0 +1,4 @@
+hxcpp_api_level=430
+hxcpp_smart_strings=1
+no_console=1
+hxcpp=C:/haxelib/hxcpp/4,3,2/
