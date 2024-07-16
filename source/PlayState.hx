@@ -22,5 +22,17 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		if (FlxG.mouse.overlaps(image))
+		{
+			if (FlxG.mouse.pressed)
+			{
+				FlxTween.cancelTweensOf(image);
+				image.setPosition(FlxG.mouse.getPosition().x - image.width / 2, FlxG.mouse.getPosition().y - image.width / 2);
+			}
+			if (FlxG.mouse.wheel != 0)
+			{
+				image.y -= FlxG.mouse.wheel * 5;
+			}
+		}
 	}
 }
